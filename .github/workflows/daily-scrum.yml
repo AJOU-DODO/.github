@@ -12,6 +12,10 @@ jobs:
   notify-discord:
     runs-on: ubuntu-latest
     steps:
+      - name: Get current date
+        # 한국 시간 기준으로 날짜를 생성하여 환경 변수에 저장합니다.
+        run: echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
       - name: Send Scrum Template to Discord
         run: |
           curl -H "Content-Type: application/json" \
@@ -19,6 +23,6 @@ jobs:
                -d '{
                  "username": "DODO Manager",
                  "avatar_url": "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Dodo.png",
-                 "content": "## 🌅 Good Morning, Team DODO!\n오늘의 **데일리 스크럼** 시간입니다. 🦤\n\n**아래 양식을 복사하여 이 메시지에 오후 12시까지 [스레드]로 남겨주세요.**\n\n```markdown\n### 📅 2026-03-24 | @이름\n\n✅ **어제 완료한 일**\n- (이슈 번호와 함께 간략히 작성)\n\n🚀 **오늘 진행할 일**\n- (오늘의 주요 목표)\n\n🛑 **장애물 (Blockers)**\n- (도움이 필요한 부분이나 막힌 이슈)\n\n🔗 **관련 링크**\n- PR 또는 Issue 링크\n```"
+                 "content": "## 🌅 Good Morning, Team DODO!\n오늘의 **데일리 스크럼** 시간입니다. 🦤\n\n**아래 양식을 복사하여 이 메시지에 오후 12시까지 [스레드]로 남겨주세요.**\n\n```markdown\n### 📅 ${{ env.CURRENT_DATE }} | @이름\n\n✅ **어제 완료한 일**\n- (이슈 번호와 함께 간략히 작성)\n\n🚀 **오늘 진행할 일**\n- (오늘의 주요 목표)\n\n🛑 **장애물 (Blockers)**\n- (도움이 필요한 부분이나 막힌 이슈)\n\n🔗 **관련 링크**\n- PR 또는 Issue 링크\n```"
                }' \
                ${{ secrets.DISCORD_SCRUM_WEBHOOK_URL }}
