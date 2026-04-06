@@ -6,10 +6,10 @@ SW 캡스톤디자인 1조 TEAM DODO
 
 | Part | Link | Description |
 | :--- | :--- | :--- |
-| **Document** | [![Document](https://img.shields.io/badge/Document-181717?style=for-the-badge)](https://github.com/AJOU-DODO/SWCapstone-document) | 프로젝트 문서 및 설계 자료 (docx, pdf) |
-| **Android** | [![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge)](https://github.com/AJOU-DODO/SWCapstone-android) | 안드로이드 네이티브 앱 소스 코드 |
 | **Backend** | [![Backend](https://img.shields.io/badge/Backend-6DB33F?style=for-the-badge)](https://github.com/AJOU-DODO/SWCapstone-backend) | 백엔드 서버 소스 코드, Infra 관련 소스 |
+| **Android** | [![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge)](https://github.com/AJOU-DODO/SWCapstone-android) | 안드로이드 네이티브 앱 소스 코드 |
 | **Frontend** | [![Frontend](https://img.shields.io/badge/Frontend-61DAFB?style=for-the-badge&logoColor=black)](https://github.com/AJOU-DODO/SWCapstone-frontend) | 프론트엔드 웹&웹뷰 소스 코드 |
+| **Document** | [![Document](https://img.shields.io/badge/Document-181717?style=for-the-badge)](https://github.com/AJOU-DODO/SWCapstone-document) | 프로젝트 문서 및 설계 자료 (docx, pdf) |
 
 
 ## 👥 Team Members
